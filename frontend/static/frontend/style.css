@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: navy;
+}
+
+p {
+    color: darkgreen;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
