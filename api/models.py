@@ -14,7 +14,7 @@ class Users(models.Model):
 
 class BioMedicalData(models.Model):
     dataid = models.AutoField(primary_key=True)
-    userid = models.ForeignKey(Users, on_delete=models.CASCADE)
+    userid = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='biomedical_data')
     pulse = models.JSONField()
     timestamps = models.JSONField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -22,7 +22,7 @@ class BioMedicalData(models.Model):
 
 class GPSData(models.Model):
     dataid = models.AutoField(primary_key=True)
-    userid = models.ForeignKey(Users, on_delete=models.CASCADE)
+    userid = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='gps_data')
     latitude = models.JSONField()
     longitude = models.JSONField()
     timestamps = models.JSONField()
