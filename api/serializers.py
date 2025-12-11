@@ -5,13 +5,13 @@ from .models import Users, BioMedicalData, GPSData
 class BioMedicalDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = BioMedicalData
-        fields = ["pulse", "timestamps"]
+        fields = ["dataid", "userid", "pulse", "temperature", "timestamps", "in_buffer", "created_at"]
 
 
 class GPSDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = GPSData
-        fields = ["latitude", "longitude", "timestamps"]
+        fields = ["dataid", "userid", "latitude", "longitude", "timestamps", "in_buffer", "created_at"]
 
 
 class UserSerializer(serializers.ModelSerializer):
